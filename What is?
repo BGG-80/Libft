@@ -1,0 +1,25 @@
+
+The C programming language is not limited to print text to the standard output, we can access complex data, interact with the web, play with graphics and more. 
+The secret to do that is to understand and use C libraries. Libraries can boost our C program’s potential. 
+This libraries are found free on the internet, so we can download, install and use them. 
+
+What is a library?
+
+First of all we need to understand that one of the bunch of tools that compilers provide us are the libraries:
+  A library is basically just an archive of object files. And is made up of useful and reusable code
+  Is a collection of header files, exposed for use by other programs. 
+  The library therefore consists of an interface expressed in a .h file (named the "header") and an implementation expressed in a .c file.”
+  
+  If you have a bunch of files that contain just functions, you can turn these source files into libraries that can be used statically or dynamically by programs. 
+  This is good for program modularity, and code re-use. Write Once, Use Many.
+
+Why use libraries?
+
+The general philosophy behind libraries is that…
+
+    They allow code reuse.
+    Provide special access to some aspects of the hardware or software.
+    We should use them because the libraries have gone through rigorous testing and work, so they have been optimized to have a good performance.
+    And libraries work everywhere.
+
+These are just the basics, if you want to deep more on this topic I suggest you to visit this useful page: https://medium.com/@julianfrancor9/understanding-c-libraries-e5c321fd4aac
