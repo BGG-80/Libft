@@ -1,0 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: blgutier <blgutier@student.42madrid.c      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/15 20:11:51 by blgutier          #+#    #+#             */
+/*   Updated: 2025/01/27 20:49:32 by blgutier         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+### ft_isdigit
+![ft_isdigit 42 libft animation](https://i.imgur.com/NqD2oNG.gif)
+
+#include "libft.h"
+
+int	ft_isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
+}
