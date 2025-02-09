@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blgutier <blgutier@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 17:45:46 by blgutier          #+#    #+#             */
-/*   Updated: 2025/01/27 20:50:33 by blgutier         ###   ########.fr       */
+/*   Created: 2025/02/09 10:17:03 by blgutier          #+#    #+#             */
+/*   Updated: 2025/02/09 13:52:49 by blgutier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	else
-		return (0);
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
+}
+/*static void del(void *content)
+{
+	free(content);
 }
 
-/*int	main(void)
-{
-	int	c;
-	int	d;
-	int	e;
-	int	f;
-
-	c = 'j';
-	d = '8';
-	e = 'K';
-	f = '&';
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(c));
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(d));
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(e));
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(f));
+int main (void)
+{	
+	char *contenido = malloc(10);
+		if(!contenido)
+			return (1);
+	
+	contenido = ft_strdup("Hola");
+	t_list *nodo = ft_lstnew(contenido);
+	printf("Antes de eliminar la lista tenía: %s\n", (char *)nodo->content);
+	ft_lstdelone(nodo, del);
 	return (0);
 }*/

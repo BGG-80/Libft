@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blgutier <blgutier@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 17:45:46 by blgutier          #+#    #+#             */
-/*   Updated: 2025/01/27 20:50:33 by blgutier         ###   ########.fr       */
+/*   Created: 2025/01/25 13:31:44 by blgutier          #+#    #+#             */
+/*   Updated: 2025/02/09 13:52:09 by blgutier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_toupper(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
 	else
-		return (0);
+	{
+		return (c);
+	}
 }
-
 /*int	main(void)
 {
 	int	c;
-	int	d;
-	int	e;
-	int	f;
 
-	c = 'j';
-	d = '8';
-	e = 'K';
-	f = '&';
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(c));
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(d));
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(e));
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(f));
+	c = 'b';
+	printf("The uppercase of '%c' is '%c'\n",c, ft_toupper(c));
 	return (0);
 }*/

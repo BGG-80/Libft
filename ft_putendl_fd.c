@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blgutier <blgutier@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 17:45:46 by blgutier          #+#    #+#             */
-/*   Updated: 2025/01/27 20:50:33 by blgutier         ###   ########.fr       */
+/*   Created: 2025/02/03 21:27:38 by blgutier          #+#    #+#             */
+/*   Updated: 2025/02/09 12:16:51 by blgutier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	else
-		return (0);
+	int	len;
+
+	len = ft_strlen(s);
+	write (fd, s, len);
+	write (fd, "\n", 1);
+	return ;
 }
 
-/*int	main(void)
-{
-	int	c;
-	int	d;
-	int	e;
-	int	f;
+/*#include <fcntl.h>
 
-	c = 'j';
-	d = '8';
-	e = 'K';
-	f = '&';
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(c));
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(d));
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(e));
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(f));
+int main(void)
+{
+	int	file_name;
+	char *str = "Hola mundo"; 
+
+	file_name = open("BGG_endfile.txt", O_WRONLY | O_CREAT, S_IRUSR);
+	ft_putendl_fd(str, file_name);
+	close(file_name);
 	return (0);
 }*/

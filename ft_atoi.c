@@ -1,39 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blgutier <blgutier@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 17:45:46 by blgutier          #+#    #+#             */
-/*   Updated: 2025/01/27 20:50:33 by blgutier         ###   ########.fr       */
+/*   Created: 2025/01/26 19:24:45 by blgutier          #+#    #+#             */
+/*   Updated: 2025/02/09 12:49:05 by blgutier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_atoi(const char *nptr)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	else
-		return (0);
+	int	i;
+	int	sign;
+	int	result;
+
+	i = 0;
+	sign = 1;
+	result = 0;
+	while (nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
+		i++;
+	if (nptr[i] == '-' || nptr[i] == '+')
+	{
+		if (nptr[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		result = result * 10 + (nptr[i] - '0');
+		i++;
+	}
+	return (sign * result);
 }
 
 /*int	main(void)
 {
-	int	c;
-	int	d;
-	int	e;
-	int	f;
+	char nptr [20] = " 1123b";
+	int	num	= atoi(nptr);
 
-	c = 'j';
-	d = '8';
-	e = 'K';
-	f = '&';
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(c));
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(d));
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(e));
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(f));
+	printf("Converted integer %d\n", num);
 	return (0);
 }*/

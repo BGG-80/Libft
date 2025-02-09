@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blgutier <blgutier@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 17:45:46 by blgutier          #+#    #+#             */
-/*   Updated: 2025/01/27 20:50:33 by blgutier         ###   ########.fr       */
+/*   Created: 2025/01/16 17:20:09 by blgutier          #+#    #+#             */
+/*   Updated: 2025/02/09 11:48:24 by blgutier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_isascii(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);
@@ -22,18 +22,15 @@ int	ft_isalpha(int c)
 
 /*int	main(void)
 {
+	int	a;
+	int	b;
 	int	c;
-	int	d;
-	int	e;
-	int	f;
 
-	c = 'j';
-	d = '8';
-	e = 'K';
-	f = '&';
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(c));
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(d));
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(e));
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(f));
+	a = 100;
+	b = 'd';
+	c = 128;
+	printf ("¿ Es un carácter ASCII?: %d\n", ft_isascii(a));
+	printf ("¿ Es un carácter ASCII?: %d\n", ft_isascii(b));
+	printf ("¿ Es un carácter ASCII?: %d\n", ft_isascii(c));
 	return (0);
 }*/

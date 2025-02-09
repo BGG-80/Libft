@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blgutier <blgutier@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 17:45:46 by blgutier          #+#    #+#             */
-/*   Updated: 2025/01/27 20:50:33 by blgutier         ###   ########.fr       */
+/*   Created: 2025/02/03 17:41:22 by blgutier          #+#    #+#             */
+/*   Updated: 2025/02/09 13:51:11 by blgutier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	else
-		return (0);
-}
+	char	*trim;
+	size_t	start;
+	int		j;
 
+	if (!s1 && !set)
+		return (NULL);
+	start = 0;
+	while (s1[start] != '\0' && ft_strchr(set, s1[start]) != NULL)
+		start++;
+	j = ft_strlen(s1);
+	while (j != 0 && ft_strchr(set, s1[j]) != NULL)
+		j--;
+	trim = ft_substr (s1, start, j - start +1);
+	return (trim);
+}
 /*int	main(void)
 {
-	int	c;
-	int	d;
-	int	e;
-	int	f;
-
-	c = 'j';
-	d = '8';
-	e = 'K';
-	f = '&';
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(c));
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(d));
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(e));
-	printf ("¿Es una letra de verdad? %d\n", ft_isalpha(f));
+	char s1[] = "Hola mundo";
+	char trimmed[] = "oam";
+		
+        printf("Resultado: '%s'\n",ft_strtrim(s1,trimmed));
+	
 	return (0);
 }*/
