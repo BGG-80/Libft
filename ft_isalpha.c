@@ -10,8 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+### ft_isalpha
+![ft_isalpha 42 libft animation](https://i.imgur.com/MUCEgSx.gif)
 
+#include "libft.h"
 int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
