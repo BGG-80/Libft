@@ -5,24 +5,26 @@ MANDATORY PART: You need to replicate the following functions.
   - Libc functions:
     isalpha	    strlen		memset		bzero
     isdigit	    strlcpy		memcpy		atoi
-    isalnum	    strlcat		memmove	  toupper
-    isasci		  strchr		memchr		tolower
+    isalnum	    strlcat		memmove	  	toupper
+    isasci	    strchr		memchr		tolower
     isprint	    strrchr		memcmp		calloc (you will need malloc)
-		            strncmp
-		            strnstr
-		            strdup ( you will need malloc)
+		    strncmp
+		    strnstr
+		    strdup ( you will need malloc)
   - Additional functions
-    ft_substr		  ft_split	     ft_putchar_fd
-    ft_strjoin	  ft_itoa	       ft_putstr_fd
-    ft_strtrim		               ft_putendl_fd
-    ft_strmapi		               ft_putnbr_fd
+    ft_substr	ft_split       ft_putchar_fd
+    ft_strjoin	ft_itoa	       ft_putstr_fd
+    ft_strtrim		       ft_putendl_fd
+    ft_strmapi		       ft_putnbr_fd
     ft_striteri
 
 BONUS PART:  You need to replicate the following functions . 
              This is a bonus part , is not required to pass your libft milestone. Coding, you know, is based on optimize resources , if you learn these functions now ...
              My advice is to try them.  UP TO YOU !
-    ft_lstnew		      ft_lstdelone			
+    ft_lstnew		  ft_lstdelone			
     ft_lstadd_front	  ft_lstadd_back
-    ft_lstsize		    ft_lstclear
-    ft_lstlast		    ft_lstiter
+    ft_lstsize		  ft_lstclear
+    ft_lstlast		  ft_lstiter
     ft_lstmap
+
+I reccomend you to have a look at this repository : https://github.com/eg-delacruz/42-libft/blob/master/README.md where you can find a very clear explanation of what each function does. 
